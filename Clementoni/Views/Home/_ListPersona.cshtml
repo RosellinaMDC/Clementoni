@@ -1,0 +1,38 @@
+﻿@model List<PersonaViewModel>
+   
+@{
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <h2>numero di persone : @ViewBag.Count</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cognome</th>
+                    <th scope="col">NumeroTelefonico</th>
+                    <th scope="col">IdComune</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Nome</td>
+                        <td>@item.Cognome</td>
+                        <td>@item.NumeroTelefonico</td>
+                        <td>@item.IdComune</td>
+                        <td><a class="btn btn-danger" href="Home/Delete?Id=@item.Id">Elimina</a></td>
+                        <td><a class="btn btn-light" href="Home/Edit?Id=@item.Id">Modifica</a></td>
+                        
+
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+       
+
+    </div>
+}

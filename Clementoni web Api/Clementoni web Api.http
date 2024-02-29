@@ -1,0 +1,6 @@
+@Clementoni_web_Api_HostAddress = http://localhost:5036
+
+GET {{Clementoni_web_Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
